@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(paisaje.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+.goku {
+  width: 150px;
+  height: 250px;
+  position: relative;
+  transform: translateY(-700px);
+  filter: drop-shadow(0px 0px 10px rgba(255, 0, 0, 0.5));
+  animation: gokuAnimation 2s infinite;
+}
+
+@keyframes gokuAnimation {
+  0% {
+    transform: translateY(-1200px);
+    filter: drop-shadow(0px 0px 10px rgba(255, 0, 0, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 0, 0.5));
+  }
+  100% {
+    transform: translateY(430px);
+    filter: drop-shadow(0px 0px 10px rgba(255, 0, 0, 0.5));
+  }
+}
+
+.rayos {
+  width: 300px;
+  height: 150px;
+  position: absolute;
+  top: 600px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  opacity: 0;
+  animation: rayosAnimation 2s infinite;
+  animation-delay: 1.2s;
+}
+
+@keyframes rayosAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
